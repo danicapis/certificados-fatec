@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Certificado</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .banca {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Certificado de Participação em Banca</h1>
+  <p><strong>Disciplina:</strong> <%= banca.disciplina %></p>
+  <p><strong>Curso:</strong> <%= banca.curso %></p>
+  <p><strong>Edital:</strong> <%= banca.n_edital %></p>
+  <p><strong>Processo:</strong> <%= banca.n_processo %></p>
+  <p><strong>Portaria:</strong> <%= banca.portaria %></p>
+  <p><strong>Seção:</strong> <%= banca.seção %></p>
+  <p><strong>Deliberação:</strong> <%= banca.deliberação %></p>
+
+  <div class="banca">
+    <h3>Participantes da Banca:</h3>
+    <ul>
+      <% banca.banca.forEach(membro => { %>
+        <li><strong><%= membro.nome %></strong> - <%= membro.cargo %></li>
+      <% }); %>
+    </ul>
+  </div>
+</body>
+</html>
