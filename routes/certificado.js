@@ -27,30 +27,38 @@ router.get('/pdf/:id', async (req, res) => {
 
     const presidenteNome = edital.banca[0] || 'Nome do Presidente';
 
-    drawWhiteBox(135, 640, 300, 15);
-    drawText(`${presidenteNome}`, 135, 640, 12);
+  // Nome do membro da banca (presidente)
+drawWhiteBox(161, 690, 300, 15);
+drawText(`${presidenteNome}`, 161, 690, 12);
 
-    drawWhiteBox(340, 618, 150, 15);
-    drawText(edital.n_edital || '', 340, 618, 12);
+// Nº do edital
+drawWhiteBox(256, 669, 150, 15);
+drawText(edital.n_edital || '', 256, 669, 12);
 
-    drawWhiteBox(150, 598, 300, 15);
-    drawText(edital.n_processo || '', 150, 598, 12);
+// Nº do processo
+drawWhiteBox(36, 633, 150, 15);
+drawText(edital.n_processo || '', 36, 633, 12);
 
-    drawWhiteBox(130, 577, 300, 15);
-    drawText(edital.disciplina || '', 130, 577, 12);
+// Nome da disciplina
+drawWhiteBox(157, 649, 300, 15);
+drawText(edital.disciplina || '', 157, 649, 12);
 
-    drawWhiteBox(130, 557, 300, 15);
-    drawText(edital.curso || '', 130, 557, 12);
+// Curso
+drawWhiteBox(195, 523, 300, 15);
+drawText(edital.curso || '', 195, 523, 12);
 
-    let startY = 500;
-    edital.banca.forEach((nome, index) => {
-      drawWhiteBox(130, startY, 400, 15);
-      drawText(`${index + 1}. ${nome}`, 130, startY, 12);
-      startY -= 20;
-    });
+// Lista de membros da banca
+let startY = 470;
+edital.banca.forEach((nome, index) => {
+  drawWhiteBox(135, startY, 400, 15);
+  drawText(`${index + 1}. ${nome}`, 135, startY, 12);
+  startY -= 20;
+});
 
-    drawWhiteBox(130, 140, 300, 15);
-    drawText(`${presidenteNome}`, 130, 140, 12);
+// Assinatura (nome do presidente novamente)
+drawWhiteBox(140, 157, 300, 15);
+drawText(`${presidenteNome}`, 140, 157, 12);
+
 
     const pdfBytes = await pdfDoc.save();
 
