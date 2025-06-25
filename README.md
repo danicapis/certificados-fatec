@@ -5,38 +5,33 @@ Projeto backend desenvolvido em estágio voluntário na FATEC Zona Leste, como p
 
 Sistema backend desenvolvido em **Node.js + Express** para geração de certificados em **PDF** de participação em bancas examinadoras de concursos públicos. Utiliza um **modelo oficial em PDF**, preenchido automaticamente com dados vindos do **MongoDB Atlas**.
 
----
 
-## 📚 Sobre o Projeto
+📚 Sobre o Projeto
 
 Este projeto foi desenvolvido como parte de um **estágio voluntário** realizado na **FATEC Zona Leste**, integrando o processo de modernização e automação do **ambiente Wiki institucional**.
 
 O objetivo principal é facilitar a emissão de certificados oficiais de participação para professores que compõem bancas examinadoras de concursos, garantindo agilidade e padronização no processo.
 
----
 
-## ✨ Funcionalidades
+✨ Funcionalidades
 
 - Conexão com MongoDB Atlas
 - Leitura de dados da banca examinadora
 - Preenchimento automático de um modelo de certificado oficial em PDF
-- Visualização e download direto do certificado gerado
-
----
-
-## ✅ Tecnologias utilizadas
+- Visualização e download direto do certificado gerado 
+  
+✅ Tecnologias utilizadas
 
 - **Node.js** — ambiente backend
 - **Express** — framework de servidor
 - **Mongoose** — integração com MongoDB
 - **Dotenv** — variáveis de ambiente
 - **PDF-lib** — manipulação de arquivos PDF
-- **EJS** — opcional, para templates HTML
 
 
-## 🚀 Como rodar o projeto
+🚀 Como rodar o projeto
 
-### 1. Clone o repositório
+1. Clone o repositório
 
 ```bash
 git clone https://github.com/seu-usuario/certificados-backend.git
